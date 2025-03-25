@@ -189,7 +189,7 @@ export default function MultipleContainers() {
       )
       if (!activeItem) return prev
 
-      const newContainers = prev.map((container) => {
+      return prev.map((container) => {
         if (container.id === activeContainerId) {
           return {
             ...container,
@@ -221,7 +221,6 @@ export default function MultipleContainers() {
         }
         return container
       })
-      return newContainers
     })
   }
 
