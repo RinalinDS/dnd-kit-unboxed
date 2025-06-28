@@ -212,11 +212,20 @@ export default function MultipleContainers() {
             return {
               ...container,
               items: [
-                ...container.items.slice(0, overItemIndex + 1),
+                ...container.items.slice(0, overItemIndex),
                 activeItem,
-                ...container.items.slice(overItemIndex + 1),
+                ...container.items.slice(overItemIndex),
               ],
             }
+            // ВРОДЕ БЫ что с +1 что без работает нормально, я не знаю зачем был +1
+            // return {
+            //   ...container,
+            //   items: [
+            //     ...container.items.slice(0, overItemIndex + 1),
+            //     activeItem,
+            //     ...container.items.slice(overItemIndex + 1),
+            //   ],
+            // }
           }
         }
         return container
